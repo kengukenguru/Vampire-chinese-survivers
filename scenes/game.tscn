@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2skkw8dv3wuya8"]
+
+[sub_resource type="GDScript" id="GDScript_h1234"]
+script = preload("res://scripts/game_manager.gd")
+
+[node name="Game" type="Node2D"]
+script = SubResource("GDScript_h1234")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(640, 360)
+script = preload("res://scripts/player.gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+modulate = Color.WHITE
+scale = Vector2(2, 2)
+texture = preload("res://assets/player.png")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = preload("res://assets/player_collision.tres")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Effects" type="Node2D" parent="."]
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = preload("res://scripts/enemy_spawner.gd")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+script = preload("res://scripts/ui_manager.gd")
+
+[node name="AbilitySystem" type="Node" parent="."]
+script = preload("res://scripts/ability_system.gd")
+
+[node name="PassiveSystem" type="Node" parent="."]
+script = preload("res://scripts/passive_system.gd")
