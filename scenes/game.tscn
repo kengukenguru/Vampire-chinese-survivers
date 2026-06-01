@@ -11,12 +11,11 @@ position = Vector2(640, 360)
 script = preload("res://scripts/player.gd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-modulate = Color.WHITE
 scale = Vector2(2, 2)
-texture = preload("res://assets/player.png")
+color = Color.WHITE
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = preload("res://assets/player_collision.tres")
+shape = RectangleShape2D.new()
 
 [node name="Enemies" type="Node2D" parent="."]
 
