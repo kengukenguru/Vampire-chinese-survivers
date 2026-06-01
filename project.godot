@@ -12,15 +12,14 @@ config_version=5
 config/name="Vampire Chinese Survivors"
 config/version="1.0.0"
 run/main_scene="res://scenes/game.tscn"
-config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://assets/icon.svg"
+config/features=PackedStringArray("4.0", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6")
+config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/handheld/orientation=portrait
-window/stretch/mode="canvas_items"
 
 [input]
 
